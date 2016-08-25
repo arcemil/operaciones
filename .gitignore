@@ -1,0 +1,9 @@
+# Git must ignore configuration and temporary files
+
+# Maven
+/target/
+
+# Eclipse
+/.classpath
+/.project
+/.settings/ 
