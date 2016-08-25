@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SumaTest {
+public class SumaUnoTest {
 
 	@Test
 	public void NoventaYNuevaMasUno() {
@@ -21,7 +21,7 @@ public class SumaTest {
 		List<Integer> result = Suma.sumaUno(noventaYNueve);
 		
 		assertEquals("Sumar 99 mas uno no da un resultado de tres digitos", result.size(), 3);
-		assertTrue("Sumar 99 m·s uno no da 100", result.get(0) == 1 && result.get(1) == 0 && result.get(2) == 0);
+		assertTrue("Sumar 99 mas uno no da 100", result.get(0) == 1 && result.get(1) == 0 && result.get(2) == 0);
 	}
 
 	@Test
@@ -36,13 +36,13 @@ public class SumaTest {
 		System.out.println("valor + uno : " + Utils.listToString(result));
 		
 		assertEquals("Sumar 315 mas uno no da un resultado de tres digitos", result.size(), 3);
-		assertTrue("Sumar 315 m·s uno no da 316", result.get(0) == 3 && result.get(1) == 1 && result.get(2) == 6);
+		assertTrue("Sumar 315 mas uno no da 316", result.get(0) == 3 && result.get(1) == 1 && result.get(2) == 6);
 	}
 	
 	@Test
 	public void valorAleatorioMasUno() {
 
-		// n˙mero aleatorio de digitos
+		// n√∫mero aleatorio de digitos
 		Random r = new Random();
 		int n = r.nextInt(1001);
 		
@@ -50,11 +50,11 @@ public class SumaTest {
 		List<Integer> A = Utils.randArray(n);			
 		System.out.println("valor : " + Utils.listToString(A));
 		
-		// valor m·s uno
+		// valor m√°s uno
 		List<Integer> result = Suma.sumaUno(A);
 		System.out.println("valor + uno : " + Utils.listToString(result));
 		
-		// obtiene el resultado con BigInteger (or·culo)
+		// obtiene el resultado con BigInteger (or√°culo)
 		BigInteger numero = new BigInteger(Utils.listToString(A));
 		numero.add( new BigInteger("1") );
 		System.out.println("valor + uno : " + numero.toString());

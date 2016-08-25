@@ -1,5 +1,7 @@
 package operaciones;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -39,4 +41,51 @@ public class Suma {
 		return A;
 	}
 
+	public static List<Integer> suma(List<Integer> A, List<Integer> B) {
+		
+		// int Rsize = Math.max(A.size(), B.size()) + 1;
+		// List<Integer> R = new ArrayList<>(Collections.nCopies(Rsize, 0));
+		
+		List<Integer> R = new ArrayList<>();
+		
+		// empieza por los digitos menos significativos
+		int n = A.size() - 1;
+		int m = B.size() - 1;
+		
+		// inicializa carry en 0
+		int carry = 0;
+		int digit = 0;
+		
+		// recorre todos los digitos de los dos números
+		while (n >= 0 && m >= 0 ) {
+			digit = (A.get(n) + B.get(m) + carry)%10;
+			carry = (A.get(n) + B.get(m) + carry)/10;
+			
+			R.add(0,digit);
+			n--;
+			m--;
+		}
+		
+		while (n>=0) {
+			digit = (A.get(n) + carry)%10;
+			carry = (A.get(n) + carry)/10;		
+			R.add(0,digit);
+			n--;
+		}
+		
+		while (m>=0) {
+			digit = (B.get(n) + carry)%10;
+			carry = (B.get(n) + carry)/10;		
+			R.add(0,digit);
+			m--;
+		}
+		
+		if (carry == 1) {
+			R.add(0, carry);
+		}
+
+		return R;
+	
+	}
+	
 }
