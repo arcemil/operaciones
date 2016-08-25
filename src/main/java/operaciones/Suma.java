@@ -3,18 +3,18 @@ package operaciones;
 import java.util.List;
 
 /**
- * Funciones para la suma de números representados como listas de enteros
+ * Funciones para la suma de nÃºmeros representados como listas de enteros
  */
 public class Suma {
 
 	/**
-	 * Suma un uno a un número representado como una lista de enteros
-	 * @param A lista de enteros que representa un número
-	 * @return lista de enteros que representa el número más uno
+	 * Suma un uno a un nÃºmero representado como una lista de enteros
+	 * @param A lista de enteros que representa un nÃºmero
+	 * @return lista de enteros que representa el nÃºmero mÃ¡s uno
 	 */
 	public static List<Integer> sumaUno(List<Integer> A) {
 		
-		// toma el digito menos significativo (en la última posición)
+		// toma el digito menos significativo (en la Ãºltima posiciÃ³n)
 		int n = A.size() - 1;
 		// le suma uno
 		A.set(n, A.get(n) + 1);
@@ -27,7 +27,7 @@ public class Suma {
 			A.set(i - 1, A.get(i - 1) + 1);
 		}
 		
-		// el digito más significativo (en la primera posición es 10) ?
+		// el digito mÃ¡s significativo (en la primera posiciÃ³n es 10) ?
 		if (A.get(0) == 10) {
 			// cambia el valor por creo
 			A.set(0, 0);
@@ -35,7 +35,7 @@ public class Suma {
 			A.add(0, 1);
 		}
 		
-		// retorna el número
+		// retorna el nÃºmero
 		return A;
 	}
 

@@ -6,21 +6,21 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Utilidades para la manipulación de números representados como 
+ * Utilidades para la manipulaciÃ³n de nÃºmeros representados como 
  * una lista de enteros.
  */
 public class Utils {
 
 	/**
-	 * Genera un número aleatorio de tamaño n
-	 * @param len cantidad de digitos del número
-	 * @return lista que representa un número aleatorio
+	 * Genera un nÃºmero aleatorio de tamaÃ±o
+	 * @param len cantidad de digitos del nÃºmero
+	 * @return lista que representa un nÃºmero aleatorio
 	 */
 	public static List<Integer> randArray(int len) {
-		// obtiene un generador de números aleatorios
+		// obtiene un generador de nÃºmeros aleatorios
 		Random r = new Random();
 		
-		// si el tamaño es cero
+		// si el tamaï¿½o es cero
 		if (len == 0) {
 			// retorna un arreglo con un cero
 			return Arrays.asList(0);
@@ -40,8 +40,8 @@ public class Utils {
 
 	/**
 	 * Convierte una lista a una cadena
-	 * @param A lista de enteros que representa un número
-	 * @return Cadena que representa el número 
+	 * @param A lista de enteros que representa un nÃºmero
+	 * @return Cadena que representa el nÃºmero 
 	 */
 	public static String listToString(List<Integer> A) {
 		StringBuilder result = new StringBuilder();
@@ -49,6 +49,14 @@ public class Utils {
 			result.append(a);
 		}
 		return result.toString();
+	}
+	
+	public static List<Integer> stringToList(String numero) throws Exception {
+		List<Integer> A = new ArrayList<>();
+		for(int i=0; i<numero.length(); i++) {
+			
+		}
+		return A;
 	}
 
 }
