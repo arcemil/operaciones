@@ -1,9 +1,30 @@
 # Git must ignore configuration and temporary files
 
+# -- From Java
+
+# Java binaries
+bin/
+tmp/
+*.class
+
 # Maven
 /target/
 
-# Eclipse
-/.classpath
-/.project
-/.settings/ 
+# Package Files
+*.jar
+*.war
+*.ear
+
+# -- From Editors and IDEs
+
+# NetBeans
+nbactions.xml
+/nb-configuration.xml
+
+# Eclipse 
+.project
+.classpath
+.settings/
+
+# IntelliJ
+.idea/
