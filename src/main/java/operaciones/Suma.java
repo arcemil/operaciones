@@ -13,7 +13,7 @@ public class Suma {
 	 * @param A lista de enteros que representa un número
 	 * @return lista de enteros que representa el número más uno
 	 */
-	public static List<Integer> sumaUno(List<Integer> A) {
+	public static List<Integer> sumarUno(List<Integer> A) {
 		
 		// toma el digito menos significativo (en la última posición)
 		int n = A.size() - 1;
@@ -46,7 +46,7 @@ public class Suma {
 	 * @param B otro número representado como una lista de enteros
 	 * @return suma de los dos números
 	 */
-	public static List<Integer> suma(List<Integer> A, List<Integer> B) {
+	public static List<Integer> sumar(List<Integer> A, List<Integer> B) {
 		
 		List<Integer> R = new ArrayList<>();
 		

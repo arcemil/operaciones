@@ -18,7 +18,7 @@ public class SumaUnoTest {
 		noventaYNueve.add(9);
 		noventaYNueve.add(9);
 		
-		List<Integer> result = Suma.sumaUno(noventaYNueve);
+		List<Integer> result = Suma.sumarUno(noventaYNueve);
 		
 		assertEquals("Sumar 99 mas uno no da un resultado de tres digitos", result.size(), 3);
 		assertTrue("Sumar 99 mas uno no da 100", result.get(0) == 1 && result.get(1) == 0 && result.get(2) == 0);
@@ -32,7 +32,7 @@ public class SumaUnoTest {
 		TrescientosQuince.add(1);
 		TrescientosQuince.add(5);
 		
-		List<Integer> result = Suma.sumaUno(TrescientosQuince);
+		List<Integer> result = Suma.sumarUno(TrescientosQuince);
 		System.out.println("valor + uno : " + Utils.listToString(result));
 		
 		assertEquals("Sumar 315 mas uno no da un resultado de tres digitos", result.size(), 3);
@@ -51,7 +51,7 @@ public class SumaUnoTest {
 		System.out.println("valor : " + Utils.listToString(A));
 		
 		// valor más uno
-		List<Integer> result = Suma.sumaUno(A);
+		List<Integer> result = Suma.sumarUno(A);
 		System.out.println("valor + uno : " + Utils.listToString(result));
 		
 		// obtiene el resultado con BigInteger (oráculo)

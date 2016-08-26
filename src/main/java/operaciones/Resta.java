@@ -3,9 +3,19 @@ package operaciones;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Funciones para la resta de números representados como listas de enteros
+ */
 public class Resta {
 
-	public static List<Integer> resta(List<Integer> A, List<Integer> B) throws UnsupportedOperationException {
+	/**
+	 * Resta dos números representados como arreglos de enteros
+	 * @param A número representado como un arreglo de enteros
+	 * @param B otro número representado como arreglo de enteros
+	 * @return valor del primer número menos el segundo
+	 * @throws UnsupportedOperationException Error si A es menor que B
+	 */
+	public static List<Integer> restar(List<Integer> A, List<Integer> B) throws UnsupportedOperationException {
 		
 		A = Utils.quitarCeros(A);
 		B = Utils.quitarCeros(B);

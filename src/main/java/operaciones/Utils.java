@@ -23,7 +23,7 @@ public class Utils {
 		// obtiene un generador de números aleatorios
 		Random r = new Random();
 
-		// si el tama�o es cero
+		// si el tamaño es cero
 		if (len == 0) {
 			// retorna un arreglo con un cero
 			return Arrays.asList(0);
@@ -43,6 +43,11 @@ public class Utils {
 
 	// == Procesamiento de los números
 	
+	/**
+	 * Elimina los ceros a la izquierda del número
+	 * @param numero número representado como una lista de enteros
+	 * @return el mismo número sin ceros a la izquierda
+	 */
 	public static List<Integer> quitarCeros(List<Integer> numero) {
 		int i = 0;
 		while (i<numero.size() && numero.get(i)==0) {
@@ -57,6 +62,12 @@ public class Utils {
 	
 	// == Comparaciones
 	
+	/**
+	 * Determina si el primer número es igual al segundo
+	 * @param A número representado como una lista de enteros
+	 * @param B otro número representado como una lista de enteros
+	 * @return true si el priemr número es igual al segundo
+	 */
 	public static boolean iguales (List<Integer> A, List<Integer> B) {
 		A = quitarCeros(A);
 		B = quitarCeros(B);
@@ -73,6 +84,12 @@ public class Utils {
 		return true;
 	}
 	
+	/**
+	 * Determina si el primer número es menor al segundo
+	 * @param A número representado como una lista de enteros
+	 * @param B otro número representado como una lista de enteros
+	 * @return true si el priemr número es menor al segundo
+	 */
 	public static boolean menor (List<Integer> A, List<Integer> B) {
 		A = quitarCeros(A);
 		B = quitarCeros(B);
@@ -96,6 +113,12 @@ public class Utils {
 		}		
 	}
 	
+	/**
+	 * Determina si el primer número es mayor al segundo
+	 * @param A número representado como una lista de enteros
+	 * @param B otro número representado como una lista de enteros
+	 * @return true si el priemr número es mayor al segundo
+	 */	
 	public static boolean mayor (List<Integer> A, List<Integer> B) {
 		A = quitarCeros(A);
 		B = quitarCeros(B);

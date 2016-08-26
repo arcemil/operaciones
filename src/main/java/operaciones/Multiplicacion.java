@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Funciones para la suma de números representados como listas de enteros
+ * Funciones para la multiplicación de números representados como listas de enteros
  */
 public class Multiplicacion {
 
