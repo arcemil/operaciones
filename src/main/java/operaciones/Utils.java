@@ -88,7 +88,7 @@ public class Utils {
 	 * Determina si el primer número es menor al segundo
 	 * @param A número representado como una lista de enteros
 	 * @param B otro número representado como una lista de enteros
-	 * @return true si el priemr número es menor al segundo
+	 * @return true si el primer número es menor al segundo
 	 */
 	public static boolean menor (List<Integer> A, List<Integer> B) {
 		A = quitarCeros(A);
