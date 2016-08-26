@@ -1,7 +1,6 @@
 package operaciones;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -41,10 +40,13 @@ public class Suma {
 		return A;
 	}
 
+	/**
+	 * Suma dos números representados como listas de enteros
+	 * @param A número representado como una lista de enteros
+	 * @param B otro número representado como una lista de enteros
+	 * @return suma de los dos números
+	 */
 	public static List<Integer> suma(List<Integer> A, List<Integer> B) {
-		
-		// int Rsize = Math.max(A.size(), B.size()) + 1;
-		// List<Integer> R = new ArrayList<>(Collections.nCopies(Rsize, 0));
 		
 		List<Integer> R = new ArrayList<>();
 		
@@ -57,7 +59,7 @@ public class Suma {
 		int digit = 0;
 		
 		// recorre todos los digitos de los dos números
-		while (n >= 0 && m >= 0 ) {
+		while (n >= 0 && m >= 0) {
 			digit = (A.get(n) + B.get(m) + carry)%10;
 			carry = (A.get(n) + B.get(m) + carry)/10;
 			
@@ -65,27 +67,27 @@ public class Suma {
 			n--;
 			m--;
 		}
-		
+		// todavia hay digitos en A ?
 		while (n>=0) {
 			digit = (A.get(n) + carry)%10;
 			carry = (A.get(n) + carry)/10;		
 			R.add(0,digit);
 			n--;
 		}
-		
+		// todavia hay digitos en B ?
 		while (m>=0) {
 			digit = (B.get(n) + carry)%10;
 			carry = (B.get(n) + carry)/10;		
 			R.add(0,digit);
 			m--;
 		}
-		
+		// al final, hay un uno en el carry ?
 		if (carry == 1) {
 			R.add(0, carry);
 		}
 
-		return R;
-	
+		// retorna el resultado
+		return R;	
 	}
 	
 }
