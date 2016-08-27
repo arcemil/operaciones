@@ -15,6 +15,7 @@ public class Resta {
 	 * @return valor del primer número menos el segundo
 	 * @throws UnsupportedOperationException Error si A es menor que B
 	 */
+	//ivan:complejidad n^2
 	public static List<Integer> restar(List<Integer> A, List<Integer> B) throws UnsupportedOperationException {
 		
 		A = Utils.quitarCeros(A);

@@ -48,8 +48,10 @@ public class Utils {
 	 * @param numero número representado como una lista de enteros
 	 * @return el mismo número sin ceros a la izquierda
 	 */
+	
 	public static List<Integer> quitarCeros(List<Integer> numero) {
 		int i = 0;
+		//ivan:complejidad n
 		while (i<numero.size() && numero.get(i)==0) {
 			i++;
 		};		
@@ -72,6 +74,7 @@ public class Utils {
 		A = quitarCeros(A);
 		B = quitarCeros(B);
 		
+		//ivan: complejidad n
 		if (A.size() != B.size()) {
 			return false;
 		} else {
@@ -90,6 +93,7 @@ public class Utils {
 	 * @param B otro número representado como una lista de enteros
 	 * @return true si el primer número es menor al segundo
 	 */
+	//ivan:complejidad n
 	public static boolean menor (List<Integer> A, List<Integer> B) {
 		A = quitarCeros(A);
 		B = quitarCeros(B);
